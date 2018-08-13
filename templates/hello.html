@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+   <body>
+   <h1>Compare Your Files the Cool Way!</h1>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+		{{ form }}
+	    <input type="submit" value="Upload">
+        <p>This website finds the differences between 2 .csv files and mark the differences in a super cool way.</p>
+        <p>Simply upload 2 .csv files you have, then click Upload. The time for the algorithm to process output file depends on how large the files you uploaded. For example, files with the size 12 MBs takes 2 minutes 56 seconds to process</p>
+            <p><b>Please do not refresh the browser after you click upload.</b></p>
+	</form>
+   </body>
+</html>
